@@ -1,7 +1,7 @@
 const request = require('request');
 const fs = require('fs');
 
-request.get('https://sytantris.github.io/http-examples/future.jpg', console.log('Downloading Image!!!'))
+request.get('https://sytantris.github.io/http-examples/future.jpg', console.log('Downloading Image!!! '))
        .on('error', function(err) {
           throw err;
        })
@@ -9,4 +9,4 @@ request.get('https://sytantris.github.io/http-examples/future.jpg', console.log(
           console.log('Response Status Code: ', response.statusCode);
           console.log('Downloaded!!');
        })
-       .pipe(fs.createWriteStream('./downloaded.html'));
+       .pipe(fs.createWriteStream('./downloaded.jpg'));
